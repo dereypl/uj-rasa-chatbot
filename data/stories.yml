@@ -1,0 +1,65 @@
+version: "3.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: hello world path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: hello_world
+  - action: action_hello_world
+
+- story: opening hours path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_for_opening_hours
+  - action: action_show_opening_hours
+
+- story: check is open now path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: check_is_open_now
+  - action: action_check_is_open_now
+
+- story: check is open on day path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: check_is_open_on_day
+  - action: action_check_is_open_on_day
+
+- story: show menu path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: show_menu
+  - action: action_show_menu

@@ -1,0 +1,12 @@
+version: "3.0"
+
+nlu:
+  - lookup: days_of_week_entities
+    examples: |
+      - monday
+      - tuesday
+      - wednesday
+      - thursday
+      - friday
+      - saturday
+      - sunday
